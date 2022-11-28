@@ -5,6 +5,8 @@
   --bg-header-white: #ffffff;
   --header-bottom-border: #ececec;
   --works-border: #eeeeee;
+  --bg-hero-overlay: #c4c4c4;
+  --social-icon-fill: #afb1b8;
 
   --text-primary-black: #212121;
   --logo-black: #000000;
@@ -140,7 +142,16 @@ ul.main-contacts {
 }
 
 a.header-contacts {
+  width: 100%;
+  height: 100%;
   color: var(--text-primary-grey);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-svg {
+  fill: currentColor;
 }
 
 a.site-nav:hover,
@@ -148,14 +159,28 @@ a.site-nav:focus,
 a.header-contacts:hover,
 a.header-contacts:focus {
   color: var(--primary-blue);
+  fill: var(--primary-blue);
 }
 
 section.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
 
-  background-color: var(--bg-main-black);
+  background-color: var(--bg-hero-overlay);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -204,6 +229,18 @@ ul.adv-list .advantage-title {
 
 ul.adv-list > .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.advantage .thumb {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background-color: var(--bg-secondary-white);
 }
 
 .section-title {
@@ -267,8 +304,80 @@ ul.team-members .team-role {
   padding-bottom: 30px;
 }
 
+.team-info p {
+  margin-bottom: 16px;
+}
+
+.member-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.member-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.member-social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background-color: var(--bg-header-white);
+  fill: var(--social-icon-fill);
+}
+
+.member-social-link:hover,
+.member-social-link:hover {
+  background-color: var(--primary-blue);
+  fill: var(--bg-header-white);
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-item {
+  width: 170px;
+  height: 92px;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--social-icon-fill);
+  border-radius: 4px;
+
+  fill: var(--social-icon-fill);
+}
+
+.client-link:hover,
+.client-link:focus {
+  fill: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
 .main-logo.footer-logo {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
+  margin-right: 0;
+  padding: 0;
 }
 
 .footer {
@@ -301,6 +410,61 @@ ul.team-members .team-role {
 
 .address-opacity {
   color: var(--opacity-white);
+}
+
+.footer-flex {
+  display: flex;
+}
+
+.footer-address-thumb {
+  margin-right: 70px;
+}
+
+.footer-social-thumb {
+  padding-top: 12px;
+  padding-bottom: 40px;
+}
+
+.footer-text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--text-full-white);
+}
+
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--bg-header-white);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--primary-blue);
 }
 
 .main-nav .nav-selected {
@@ -378,4 +542,10 @@ ul.works > .item:nth-last-child(-n + 3) {
   border-bottom: 1px solid var(--works-border);
   border-left: 1px solid var(--works-border);
   border-right: 1px solid var(--works-border);
+}
+
+.works-list .item:hover,
+.works-list .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
