@@ -159,7 +159,6 @@ a.site-nav:focus,
 a.header-contacts:hover,
 a.header-contacts:focus {
   color: var(--primary-blue);
-  fill: var(--primary-blue);
 }
 
 section.hero {
@@ -422,7 +421,6 @@ ul.team-members .team-role {
 
 .footer-social-thumb {
   padding-top: 12px;
-  padding-bottom: 40px;
 }
 
 .footer-text {
@@ -535,6 +533,8 @@ ul.works > .item:nth-last-child(-n + 3) {
 .works-field {
   font-size: 16px;
   line-height: 1.88;
+
+  color: var(--text-primary-grey)
 }
 
 .works .work-info {
@@ -544,8 +544,12 @@ ul.works > .item:nth-last-child(-n + 3) {
   border-right: 1px solid var(--works-border);
 }
 
-.works-list .item:hover,
-.works-list .item:focus {
+.works-list .item-link:hover,
+.works-list .item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.works-list .item-link {
+  display: block;
 }
